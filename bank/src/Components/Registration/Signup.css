@@ -1,0 +1,48 @@
+.login-body {
+    height: calc(100vh - 82px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-area {
+    width: 450px;
+    background: white;
+    padding: 25px 25px;
+    border-radius: 3px;
+}
+
+.login-form .form-control {
+    padding: 1rem .75rem;
+    border-radius: 3px;
+    margin-bottom: 1.5rem;
+}
+
+
+.login-form h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+
+.custom-login-botton {
+    width: 100%;
+    margin-top: 1rem;
+    border-radius: 3px;
+    padding: 0.75rem;
+    background-color: #2ecc71;
+    border: 0;
+}
+
+
+.regi-area {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.regi-area a {
+    color: #2ecc71;
+    text-decoration: none;
+}
