@@ -1,52 +1,84 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Dashboard.css';
 import Form from 'react-bootstrap/Form';
-import DropdownMultiselect from "react-multiselect-dropdown-bootstrap";
-
+import Button from 'react-bootstrap/Button';
+import Select from 'react-select';
+import { colourOptions } from './data';
 
 const Dashboard = () => {
+    const [isDownload, setDownload] = useState(false);
+    function submitButtonHandler() {
+        setDownload(true)
+    }
     return (
         <>
+
             <div className='dashboard-body'>
+                <div class="sidebar">
+                    <a class="active" href="#home">Home</a>
+                    <a href="#news">ABC</a>
+                    <a href="#contact">ABC</a>
+                    <a href="#about">ABC</a>
+                </div>
                 <div className="dashboard-area">
-
-                    {/* <div className="dashboard-sidebar">
-                        <div className="w3-sidebar w3-light-grey w3-bar-block">
-                            <h3 className="w3-bar-item">Menu</h3>
-                            <a className="w3-bar-item w3-button">Link 1</a>
-                            <a className="w3-bar-item w3-button">Link 2</a>
-                            <a className="w3-bar-item w3-button">Link 3</a>
-                        </div>
-                    </div> */}
                     <div className="dashboard-content">
-                        <div className="item">
-                            <Form.Label className="item-1">Selector One</Form.Label>
-                            <Form.Select className="item-2" size='sm'>
-                                <option>select here </option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </Form.Select>
-                        </div>
-                        <div className="item">
-                            <Form.Label className="item-1">Selector Two</Form.Label>
-                            <Form.Select className="item-2" size='sm'>
-                                <option>select here </option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </Form.Select>
-                            {/* <div className="item" className="item-3">
-                                <DropdownMultiselect
-                                    options={["option 1", "option 2", "option 3", "option 4", "option 5", "option 6"]}
-                                    name="option" />
+                        <h1 className="text-center">Dashboard Area</h1>
+                        <Form>
+                            <div className="item">
+                                <div className='item-name'>
+                                    <Form.Label className="item-1"></Form.Label>
+                                </div>
+                                <div className='item-select'>
+                                    <input class="form-control" type="file" id="formFile"></input>
+                                </div>
+                            </div>
+                            <div className="item">
+                                <div className='item-name'>
+                                    <Form.Label className="item-1">Selector One</Form.Label>
+                                </div>
+                                <div className='item-select'>
+                                    <Form.Select className="item-2" size='sm'>
+                                        <option>select here </option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </Form.Select>
+                                </div>
+                            </div>
+                            <div className="item">
+                                <div className='item-name'>
+                                    <Form.Label className="item-1">Selector Two</Form.Label>
+                                </div>
+                                <div className='item-select'>
+                                    <Form.Select className="item-2" size='sm'>
+                                        <option>select here </option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </Form.Select>
+                                </div>
+                            </div>
+                            <div className="item">
+                                <div className='item-name'>
+                                    <Form.Label className="item-1">Selector Three</Form.Label>
+                                </div>
+                                <div className='item-select'>
+                                    <Select classNames={"item-2"} defaultValue={[]} isMulti name="colors" options={colourOptions}
+                                        className="basic-multi-select" classNamePrefix="select" />
+                                </div>
+                            </div>
+                            <Button onClick={() => submitButtonHandler()} variant="primary" type="button" className="custom-login-botton">Submit
+                            </Button>
 
-                            </div> */}
+                            {isDownload ? <Button variant="primary" type="button" className="custom-login-botton">Download
+                            </Button> : null}
 
-                        </div>
+                        </Form>
+
                     </div>
                 </div>
             </div>
+
         </>
     )
 }

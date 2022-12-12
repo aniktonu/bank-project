@@ -1,60 +1,112 @@
-.dashboard-body {
-    height: calc(100vh - 82px);
+
+.dashboard-content {
+    background: #fff;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-
-
-
-}
-
-.dashboard-area {
-    width: 800px;
-    background: white;
-    padding: 25px 25px;
-    border-radius: 3px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-}
-
-.item {
-    /* width: 100%; */
-    /* height: 100%; */
-    display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    align-content: center;
+    border-radius: 3px;
+    margin: 80px auto;
+    width: 60%;
+    padding: 116px 0;
+  
 }
+
+.item .Form-Label {
+    padding: 1rem .75rem;
+    border-radius: 3px;
+    margin-bottom: 1.5rem;
+}
+
+
+.item {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+    margin: 20px 43px;
+}
+
+
 
 .item-1 {
-
+    padding-left: 100px;
     flex-basis: 50%;
 }
+
 
 
 .item-2 {
     flex-basis: 50%;
+    width: 230px;
+    height: 38px;
+
 }
 
 
+[class*="item-1"] {
+    padding-left: 0px;
+    flex-basis: 50%;
+
+}
+
+.select__control {
+    width: 238px;
+    
+}
 
 
-
-/* .dashboard-sidebar {
-    width: 15%;
-
+/* .select__control--is-focused {
+    border-color: #2ecc71;
+    box-shadow: none;
 } */
 
-/* .dashboard-content {
-    width: 85%;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    align-content: center;
 
-} */
+
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    top: 87px;
+    left: 0;
+  }
+  
+  .sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+  }
+   
+  .sidebar a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  .sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+  }
+  
+  div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+  }
+
+  .custom-login-botton {
+    width: 100%;
+    margin-top: 1rem;
+    border-radius: 3px;
+    padding: 0.75rem;
+    background-color: #2ecc71;
+    border: 0;
+}
+
+
+label.item-1.form-label {
+    padding-right: 20px;
+}
