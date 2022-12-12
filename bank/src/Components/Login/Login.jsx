@@ -18,7 +18,7 @@ const Login = () => {
                     <h1 className="text-center">Sign In</h1>
                     <Form>
                         <Form.Group>
-                            <Form.Control type="email" placeholder="Email" />
+                            <Form.Control type="username" placeholder="Username" />
                         </Form.Group>
                         <Form.Group>
                             <Form.Control type="password" placeholder="Password" />
