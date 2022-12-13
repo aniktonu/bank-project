@@ -5,11 +5,8 @@ import { useNavigate } from 'react-router-dom';
 import './Login.css';
 
 
-
-
-
-
 const Login = () => {
+
     const navigate = useNavigate();
     return (
         <div className='login-body'>
@@ -27,7 +24,7 @@ const Login = () => {
                             <Form.Check type="checkbox" label="Remember Me" />
                         </Form.Group>
                         <Button className="custom-login-botton" variant="primary" type="submit">
-                            Sign In
+                            <a onClick={() => navigate('/Dashboard')}>Sign In</a>
                         </Button>
                     </Form>
                     <div className="regi-area text-center">
