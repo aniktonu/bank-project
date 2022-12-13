@@ -33,7 +33,7 @@ const Signup = () => {
                             <Form.Check type="checkbox" label="Remember Me" />
                         </Form.Group>
                         <Button className="custom-login-botton" variant="primary" type="submit">
-                            Sign Up
+                            <a onClick={() => navigate('/')}>Sign In</a>
                         </Button>
                     </Form>
                     <div className="regi-area text-center">
