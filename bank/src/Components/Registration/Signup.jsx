@@ -7,8 +7,6 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-
-
 const Signup = () => {
     const navigate = useNavigate();
     return (
@@ -33,7 +31,7 @@ const Signup = () => {
                             <Form.Check type="checkbox" label="Remember Me" />
                         </Form.Group>
                         <Button className="custom-login-botton" variant="primary" type="submit">
-                            <a onClick={() => navigate('/')}>Sign In</a>
+                            <a onClick={() => navigate('/')}>Sign Up</a>
                         </Button>
                     </Form>
                     <div className="regi-area text-center">
